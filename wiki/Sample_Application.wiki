@@ -3,9 +3,13 @@
 = Introduction =
 
 1. Include "QIOLIb.h" to import function declare
+
 2. Call InitializeQuikIOLib() function to initialize Library
+
 3. Work~~Work
+
 4. Call ShutdownQIOLib() before exit.
+
 
 
 
