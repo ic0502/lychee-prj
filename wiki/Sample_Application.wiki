@@ -9,8 +9,8 @@ Add your content here.
 {{{
 
 #include <stdio.h>
-#include	"QIOLib.h"
-#include	"getopt_long.h"
+#include "QIOLib.h"
+#include "getopt_long.h"
 
 void usage(void)
 {
@@ -29,16 +29,16 @@ void usage(void)
 }
 
 int verbose =0;
-#define	QIO_CMOS_APP_READ		1
+#define	QIO_CMOS_APP_READ       1
 #define	QIO_CMOS_APP_WRITE	2
 
 int main(int argc, char ** argv)
 {
-    int c =0;
-	UCHAR	buffer[256]={0};
-	int      ret = 0;
-    BOOL     bRet = TRUE;
-    int         list_flag = FALSE;
+    int   c =0;
+    UCHAR buffer[256]={0};
+    int   ret = 0;
+    BOOL  bRet = TRUE;
+    int   list_flag = FALSE;
 
 	if (argc <= 1)
 	{
