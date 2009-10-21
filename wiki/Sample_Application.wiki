@@ -35,11 +35,6 @@ int verbose =0;
 int main(int argc, char ** argv)
 {
     int c =0;
- //   ULONG   from=0;
-	//ULONG	to = 0;
-	//ULONG	offset = 0;
-	//int         read_write =0;
-	//int         is_range_access = 0;
 	UCHAR	buffer[256]={0};
 	int      ret = 0;
     BOOL     bRet = TRUE;
