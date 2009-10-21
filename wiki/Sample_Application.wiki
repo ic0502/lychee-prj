@@ -40,11 +40,11 @@ int main(int argc, char ** argv)
     BOOL  bRet = TRUE;
     int   list_flag = FALSE;
 
-	if (argc <= 1)
-	{
-		usage();
-		return 0;
-	}
+    if (argc <= 1)
+    {
+	usage();
+	return 0;
+    }
 
     bRet = InitializeQuikIOLib();
     if (bRet )
