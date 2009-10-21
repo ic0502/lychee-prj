@@ -47,15 +47,15 @@ int main(int argc, char ** argv)
 	}
 
     bRet = InitializeQuikIOLib();
-	if (bRet )
-	{    
-	    while ((c = getopt(argc, argv, "lrwf:t:i:hv")) != -1 )
+    if (bRet )
+    {    
+	 while ((c = getopt(argc, argv, "lrwf:t:i:hv")) != -1 )
         {
             switch (c)
             {
             case 'l':
-			    list_flag = TRUE;
-			    break;
+		list_flag = TRUE;
+		break;
 
             case 'v'    :
                 verbose =1;
@@ -75,9 +75,9 @@ int main(int argc, char ** argv)
         {
             ret = QIOReadCMOSRange(0x00, 0xff, buffer);
             if (ret != QIO_ERROR_READ_SUCCESS)
-		    {				
-			    printf("Read error, Return code:%x\n", ret);		
-		    }
+	    {				
+		printf("Read error, Return code:%x\n", ret);		
+	    }
             printf("\n");
             for(int i = 0x00; i < 0x100; i= i+0x10)
             {
@@ -90,14 +90,14 @@ int main(int argc, char ** argv)
             }
         }
 
-        	ShutdownQIOLib();	
+        ShutdownQIOLib();	
     }
-	else
-	{
-		_tprintf(_T("InitializeQuikIOLib failed\n"));
-	}
+    else
+    {
+        _tprintf(_T("InitializeQuikIOLib failed\n"));
+    }
 
-	return 0;
+    return 0;
 }
 
 }}}
