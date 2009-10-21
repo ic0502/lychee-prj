@@ -94,7 +94,7 @@ int main(int argc, char ** argv)
     }
     else
     {
-        _tprintf(_T("InitializeQuikIOLib failed\n"));
+        printf("InitializeQuikIOLib failed\n");
     }
 
     return 0;
