@@ -1,0 +1,91 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Add your content here.
+
+
+= Details =
+
+QIOLIB_API	BOOL STDCALL InitializeQuikIOLib(void);
+QIOLIB_API	void	STDCALL ShutdownQIOLib(void);
+
+QIOLIB_API	 int STDCALL	QIOReadPortUCHAR(unsigned long port, unsigned char * pvalue);
+QIOLIB_API	 int STDCALL	QIOReadPortUSHORT(unsigned long port, unsigned short * pvalue);
+QIOLIB_API	 int STDCALL	QIOReadPortULONG(unsigned long port, unsigned long * pvalue);
+
+QIOLIB_API	 int STDCALL	QIOWritePortUCHAR(unsigned long port, unsigned char value);
+QIOLIB_API	 int STDCALL	QIOWritePortUSHORT(unsigned long port, unsigned short value);
+QIOLIB_API	 int STDCALL	QIOWritePortULONG(unsigned long port, unsigned long value);
+
+QIOLIB_API	  unsigned char inb(unsigned long port);
+QIOLIB_API	  unsigned short inw(unsigned long port);
+QIOLIB_API	  unsigned long inl(unsigned long port);
+
+QIOLIB_API	 void outb(unsigned char value, unsigned long port);
+QIOLIB_API	 void outw(unsigned short value, unsigned long port);
+QIOLIB_API	 void outl(unsigned long value, unsigned long port);
+
+QIOLIB_API	  unsigned char	readb(unsigned long addr);
+QIOLIB_API	  unsigned short	readw(unsigned long addr);
+QIOLIB_API	  unsigned long	readl(unsigned long addr);
+
+QIOLIB_API	 void		writeb( unsigned char value, unsigned long addr);
+QIOLIB_API	 void		writew(unsigned short value, unsigned long addr);
+QIOLIB_API	 void		writel(unsigned long value, unsigned long addr);
+
+QIOLIB_API	 int STDCALL	QIOReadRegUCHAR(unsigned long reg, unsigned char * pvalue);
+QIOLIB_API	 int STDCALL	QIOReadRegUSHORT(unsigned long reg, unsigned short * pvalue);
+QIOLIB_API	 int STDCALL	QIOReadRegULONG(unsigned long reg, unsigned long * pvalue);
+
+QIOLIB_API	 int STDCALL	QIOWriteRegUCHAR(unsigned long reg, unsigned char value);
+QIOLIB_API	 int STDCALL	QIOWriteRegUSHORT(unsigned long reg, unsigned short value);
+QIOLIB_API	 int STDCALL	QIOWriteRegULONG(unsigned long reg, unsigned long value);
+
+QIOLIB_API	 int STDCALL	QIOReadRegBlock(unsigned long reg, unsigned char * pvalue, unsigned long size);
+QIOLIB_API	 int STDCALL	QIOWriteRegBlock(unsigned long reg, unsigned char * pvalue, unsigned long size);
+QIOLIB_API	 int STDCALL	QIOReadRegBlock64(ULONGLONG reg, unsigned char * pvalue, unsigned long size);
+QIOLIB_API	 int STDCALL	QIOWriteRegBlock64(ULONGLONG reg, unsigned char * pvalue, unsigned long size);
+
+QIOLIB_API	 int STDCALL	QIOReadPCIConfig(unsigned long bus, unsigned long dev, unsigned long func, unsigned char value[256]);
+QIOLIB_API	 int STDCALL	QIOReadPCIConfigULONG( unsigned long bus, unsigned long dev, unsigned long func, unsigned long index, unsigned long * pvalue);
+QIOLIB_API	 int STDCALL	QIOReadPCIConfigUSHORT( unsigned long bus, unsigned long dev, unsigned long func, unsigned long index, unsigned short * pvalue);
+QIOLIB_API	 int STDCALL	QIOReadPCIConfigUCHAR( unsigned long bus, unsigned long dev, unsigned long func, unsigned long index, unsigned char * pvalue);
+
+QIOLIB_API	 int STDCALL	QIOWritePCIConfigUCHAR ( unsigned long bus, unsigned long dev, unsigned long func,	unsigned long index, unsigned char value);
+QIOLIB_API	 int STDCALL	QIOWritePCIConfigULONG (unsigned long bus, unsigned long dev, unsigned long func, unsigned long index, unsigned long value);
+QIOLIB_API	 int STDCALL	QIOWritePCIConfigUSHORT (unsigned long bus, unsigned long dev, unsigned long func, unsigned long index, unsigned short value);
+
+QIOLIB_API	 int STDCALL	QIOReadCMOS(unsigned char value[256]);
+QIOLIB_API	 int STDCALL	QIOReadCMOSIndex( unsigned long index, unsigned char * pvalue);
+QIOLIB_API	 int STDCALL	QIOWriteCMOS(unsigned char value[256]);
+QIOLIB_API	 int STDCALL	QIOWriteCMOSIndex(unsigned long index, unsigned char value);
+QIOLIB_API	 int STDCALL	QIOReadCMOSRange( unsigned char start, unsigned char end, unsigned char value[256]);
+QIOLIB_API	 int STDCALL	QIOWriteCMOSRange( unsigned char	start, unsigned char end, unsigned char value[256]);
+
+QIOLIB_API	 int STDCALL	QIOReadTSC(unsigned long value[2]);
+QIOLIB_API	 int STDCALL	QIOGetCPUID(	int CPUInfo[4],	int InfoType );
+QIOLIB_API	 int STDCALL	QIOCPUID1(	int CPUInfo[4] );
+QIOLIB_API	 int STDCALL	QIOReadMSR(unsigned long Ecx, unsigned long value[2]);
+QIOLIB_API	 int STDCALL	QIOWriteMSR( unsigned long Ecx, unsigned long value[2]);
+QIOLIB_API	 int STDCALL	QIOReadPMC(unsigned long Ecx, unsigned long value[2]);
+
+QIOLIB_API	 int STDCALL	QIOIntializeSMBIOS( void );
+
+QIOLIB_API	 int STDCALL   QIOSMBusInit(QIO_SMBUS_CONTROLLER*	smbus);
+
+
+QIOLIB_API	 int STDCALL   QIOSMBusI801Access(QIO_SMBUS_CONTROLLER*  smbus,
+			                                                        USHORT addr,
+			                                                        char read_write, 
+			                                                        UCHAR command,
+			                                                        int size, 
+			                                                        union i2c_smbus_data * data,
+			                                                        int hwpec );
+
+QIOLIB_API	  int STDCALL  QIOMapMem( PBYTE pbPhysAddr, ULONG length,  HANDLE * hMappedHandle, PBYTE *	pbLinAddr);
+QIOLIB_API   int STDCALL  QIOUnmapMem( HANDLE hMappedHandle, ULONG   length, PBYTE pbLinAddr);
+QIOLIB_API	  void *  mmap(void *addr,  size_t len,   int prot,  int flags,  int fildes, size_t off);
+QIOLIB_API	  int   munmap(void *addr, size_t len);
+
+QIOLIB_API	  void QIOSleep(  int dwMilliseconds );
