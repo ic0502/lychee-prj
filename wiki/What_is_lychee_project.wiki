@@ -94,5 +94,7 @@ nmake
 
 
 dmidecode [http://www.nongnu.org/dmidecode/]
+
 coreboot [http://www.coreboot.org]
+
 pmtools [http://www.lesswatts.org/projects/acpi/utilities.php]
