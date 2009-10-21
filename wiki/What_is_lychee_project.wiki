@@ -53,7 +53,41 @@ This tool can run at cross platform, include
 }}}
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+{{{
+
+Windows Library name is Output\Win32\Debug\QuikIOLib.dll
+ 
+binaries is under Output\Win32\Debug\ folder
+ 
+source code is under utility folder.
+
+cmos.exe    A CMOS access demo
+cpuid.exe    A cpuid access demo
+io.exe       A io port access demo
+mem.exe    A memory access demo
+msr.exe        A CPU MSR access demo
+pci.exe        A PCI device access demo
+smbus.exe    A SMBus device access demo
+ 
+Following is porting from famous Linux program dmidecode
+dmidecode.exe
+biosdecode.exe
+vpddecode.exe
+owership.exe    
+ 
+ectool.exe    porting from coreboot ，dump EC space
+ 
+pmtool is porting from Linux's pmtool
+acpidump.exe    dump acpi table
+acpixtract.exe    extract acpitable
+madt.exe    
+ 
+superiotool    porting from coreboot's superiotool，show superio information
+ 
+You should install WDK7000 to build utilitis
+How to build：
+build.cmd
+nmake
+
+
+}}}
