@@ -69,7 +69,7 @@ msr.exe        A CPU MSR access demo
 pci.exe        A PCI device access demo
 smbus.exe    A SMBus device access demo
  
-Following is porting from famous Linux program dmidecode [http://www.nongnu.org/dmidecode/]
+Following is porting from famous Linux program dmidecode [http://www.nongnu.org/dmidecode/ dmidecode ]
 dmidecode.exe
 biosdecode.exe
 vpddecode.exe
