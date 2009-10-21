@@ -94,6 +94,11 @@ nmake
 
 = QuikIO Library APIs=
 
+[http://code.google.com/p/lychee-prj/wiki/QuikIO_Library_API]
+
+
+
+= Reference =
 
 dmidecode [http://www.nongnu.org/dmidecode/]
 
