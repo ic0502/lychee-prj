@@ -61,12 +61,12 @@ binaries is under Output\Win32\Debug\ folder
  
 source code is under utility folder.
 
-cmos.exe    A CMOS access demo
+cmos.exe     A CMOS access demo
 cpuid.exe    A cpuid access demo
 io.exe       A io port access demo
-mem.exe    A memory access demo
-msr.exe        A CPU MSR access demo
-pci.exe        A PCI device access demo
+mem.exe      A memory access demo
+msr.exe      A CPU MSR access demo
+pci.exe      A PCI device access demo
 smbus.exe    A SMBus device access demo
  
 Following is porting from famous Linux program dmidecode 
@@ -78,7 +78,7 @@ owership.exe
 ectool.exe    porting from coreboot ，dump EC space
  
 pmtool is porting from Linux's pmtool
-acpidump.exe    dump acpi table
+acpidump.exe      dump acpi table
 acpixtract.exe    extract acpitable
 madt.exe    
  
@@ -94,6 +94,7 @@ nmake
 
 = QuikIO Library APIs =
 
+
 [http://code.google.com/p/lychee-prj/wiki/QuikIO_Library_API]
 
 
@@ -103,7 +104,9 @@ nmake
 
 [http://code.google.com/p/lychee-prj/wiki/Sample_Application]
 
+
 = Reference =
+
 
 dmidecode [http://www.nongnu.org/dmidecode/]
 
