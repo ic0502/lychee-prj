@@ -62,6 +62,8 @@ binaries is under Output\Win32\Debug\ folder
 source code is under utility folder.
 
 cmos.exe     A CMOS access demo
+https://lychee-prj.googlecode.com/svn/wiki/png/cmos.png
+
 cpuid.exe    A cpuid access demo
 io.exe       A io port access demo
 mem.exe      A memory access demo
@@ -91,6 +93,8 @@ nmake
 
 
 }}}
+
+https://lychee-prj.googlecode.com/svn/wiki/png/cmos.png
 
 = QuikIO Library APIs =
 
