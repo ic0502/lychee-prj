@@ -109,6 +109,24 @@ nmake
 
 http://lychee-prj.googlecode.com/files/acpidump.png
 
+http://lychee-prj.googlecode.com/files/biosdecode.png
+
+http://lychee-prj.googlecode.com/files/cmos.png
+
+http://lychee-prj.googlecode.com/files/cpuid.png
+
+http://lychee-prj.googlecode.com/files/dmi.png
+
+http://lychee-prj.googlecode.com/files/ectool.png
+
+http://lychee-prj.googlecode.com/files/io.png
+
+http://lychee-prj.googlecode.com/files/mem.png
+
+http://lychee-prj.googlecode.com/files/msr.png
+
+http://lychee-prj.googlecode.com/files/pci.png
+
 
 = Reference =
 
