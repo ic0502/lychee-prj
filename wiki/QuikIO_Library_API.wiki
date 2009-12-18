@@ -114,7 +114,7 @@ QIOLIB_API	 int STDCALL    QIOSMBusInit(QIO_SMBUS_CONTROLLER* smbus);
 QIOLIB_API	 int STDCALL    QIOSMBusI801Access(QIO_SMBUS_CONTROLLER* smbus,  USHORT addr, char read_write, UCHAR command, int size, union i2c_smbus_data * data, int hwpec );
 
 
-QIOLIB_API	  int STDCALL   QIOMapMem( PBYTE pbPhysAddr, ULONG length,  HANDLE * hMappedHandle, PBYTE *	pbLinAddr);
+QIOLIB_API	  int STDCALL   QIOMapMem( PBYTE pbPhysAddr, ULONG length,  HANDLE * hMappedHandle, PBYTE * pbLinAddr);
 
 QIOLIB_API        int STDCALL   QIOUnmapMem( HANDLE hMappedHandle, ULONG length, PBYTE pbLinAddr);
 
