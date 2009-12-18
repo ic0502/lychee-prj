@@ -38,15 +38,15 @@ QIOLIB_API	 void outl(unsigned long value, unsigned long port);
 
 QIOLIB_API	  unsigned char	readb(unsigned long addr);
 
-QIOLIB_API	  unsigned short	readw(unsigned long addr);
+QIOLIB_API	  unsigned short readw(unsigned long addr);
 
 QIOLIB_API	  unsigned long	readl(unsigned long addr);
 
-QIOLIB_API	 void		writeb( unsigned char value, unsigned long addr);
+QIOLIB_API	 void writeb( unsigned char value, unsigned long addr);
 
-QIOLIB_API	 void		writew(unsigned short value, unsigned long addr);
+QIOLIB_API	 void writew(unsigned short value, unsigned long addr);
 
-QIOLIB_API	 void		writel(unsigned long value, unsigned long addr);
+QIOLIB_API	 void writel(unsigned long value, unsigned long addr);
 
 QIOLIB_API	 int STDCALL	QIOReadRegUCHAR(unsigned long reg, unsigned char * pvalue);
 
@@ -122,7 +122,7 @@ QIOLIB_API	 int STDCALL   QIOSMBusI801Access(QIO_SMBUS_CONTROLLER*  smbus,
 
 QIOLIB_API	  int STDCALL  QIOMapMem( PBYTE pbPhysAddr, ULONG length,  HANDLE * hMappedHandle, PBYTE *	pbLinAddr);
 
-QIOLIB_API   int STDCALL  QIOUnmapMem( HANDLE hMappedHandle, ULONG   length, PBYTE pbLinAddr);
+QIOLIB_API        int STDCALL  QIOUnmapMem( HANDLE hMappedHandle, ULONG   length, PBYTE pbLinAddr);
 
 QIOLIB_API	  void *  mmap(void *addr,  size_t len,   int prot,  int flags,  int fildes, size_t off);
 
