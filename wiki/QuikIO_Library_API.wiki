@@ -92,13 +92,13 @@ QIOLIB_API	 int STDCALL	QIOWriteCMOSIndex(unsigned long index, unsigned char val
 
 QIOLIB_API	 int STDCALL	QIOReadCMOSRange( unsigned char start, unsigned char end, unsigned char value[256]);
 
-QIOLIB_API	 int STDCALL	QIOWriteCMOSRange( unsigned char	start, unsigned char end, unsigned char value[256]);
+QIOLIB_API	 int STDCALL	QIOWriteCMOSRange( unsigned char start, unsigned char end, unsigned char value[256]);
 
 QIOLIB_API	 int STDCALL	QIOReadTSC(unsigned long value[2]);
 
-QIOLIB_API	 int STDCALL	QIOGetCPUID(	int CPUInfo[4],	int InfoType );
+QIOLIB_API	 int STDCALL	QIOGetCPUID( int CPUInfo[4], int InfoType );
 
-QIOLIB_API	 int STDCALL	QIOCPUID1(	int CPUInfo[4] );
+QIOLIB_API	 int STDCALL	QIOCPUID1( int CPUInfo[4] );
 
 QIOLIB_API	 int STDCALL	QIOReadMSR(unsigned long Ecx, unsigned long value[2]);
 
@@ -108,10 +108,10 @@ QIOLIB_API	 int STDCALL	QIOReadPMC(unsigned long Ecx, unsigned long value[2]);
 
 QIOLIB_API	 int STDCALL	QIOIntializeSMBIOS( void );
 
-QIOLIB_API	 int STDCALL   QIOSMBusInit(QIO_SMBUS_CONTROLLER*	smbus);
+QIOLIB_API	 int STDCALL   QIOSMBusInit(QIO_SMBUS_CONTROLLER* smbus);
 
 
-QIOLIB_API	 int STDCALL   QIOSMBusI801Access(QIO_SMBUS_CONTROLLER*  smbus,
+QIOLIB_API	 int STDCALL   QIOSMBusI801Access(QIO_SMBUS_CONTROLLER* smbus,
 			                                                        USHORT addr,
 			                                                        char read_write, 
 			                                                        UCHAR command,
