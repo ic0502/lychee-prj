@@ -1,0 +1,109 @@
+# Introduction #
+
+1. Include "QIOLIb.h" to import function declare
+
+2. Call InitializeQuikIOLib() function to initialize Library
+
+3. Work~~Work
+
+4. Call ShutdownQIOLib() before exit.
+
+
+
+
+# Details #
+```
+
+#include <stdio.h>
+#include "QIOLib.h"
+#include "getopt_long.h"
+
+void usage(void)
+{
+	static char  gMsg[] = \
+		"lychee Project (c) 2008 ~2009 freevanx All Rights Reserved!\n" \
+		"Powered by QuikIO hardware access library!\n\n" \
+		"cmos	-	CMOS read&write utility\n" \
+		"Version 1.0\n"\
+		"    Build by CL\n\n"\
+		" 	\n"\
+		"		-l	list cmos space\n"\
+		"		-h	help\n"\
+		"		-v verbose\n";
+
+	 printf(gMsg);
+}
+
+int verbose =0;
+#define	QIO_CMOS_APP_READ       1
+#define	QIO_CMOS_APP_WRITE	2
+
+int main(int argc, char ** argv)
+{
+    int   c =0;
+    UCHAR buffer[256]={0};
+    int   ret = 0;
+    BOOL  bRet = TRUE;
+    int   list_flag = FALSE;
+
+    if (argc <= 1)
+    {
+	usage();
+	return 0;
+    }
+
+    bRet = InitializeQuikIOLib();
+    if (bRet )
+    {    
+	 while ((c = getopt(argc, argv, "lrwf:t:i:hv")) != -1 )
+        {
+            switch (c)
+            {
+            case 'l':
+		list_flag = TRUE;
+		break;
+
+            case 'v'    :
+                verbose =1;
+                break;
+
+            case 'h'    :
+            case '?'    :
+                usage();
+                break;
+
+            default:
+                usage();
+            }
+        }
+
+        if(list_flag)
+        {
+            ret = QIOReadCMOSRange(0x00, 0xff, buffer);
+            if (ret != QIO_ERROR_READ_SUCCESS)
+	    {				
+		printf("Read error, Return code:%x\n", ret);		
+	    }
+            printf("\n");
+            for(int i = 0x00; i < 0x100; i= i+0x10)
+            {
+                printf("%03X", i);
+                for(int j =i; j < (i+0x10); j++)
+                {
+                    printf("  %02X", buffer[j]);
+                }
+                printf("\n");
+            }
+        }
+
+        ShutdownQIOLib();	
+    }
+    else
+    {
+        printf("InitializeQuikIOLib failed\n");
+    }
+
+    return 0;
+}
+
+```

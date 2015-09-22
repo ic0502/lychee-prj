@@ -1,0 +1,158 @@
+# Introduction #
+
+```
+========================================================================
+    		PROJECT : lychee Project Overview
+========================================================================
+
+*************************************************************
+*	Copyright (c) 2008~2009 freevanx.  All rights reserved.
+*
+*		freevanx@gmail.com
+*	
+*	File:	Readme.txt
+*	Description:	Readme file for lychee  project
+*
+--************************************************************/
+
+*************************************************************
+ Project introduction:
+The lychee project aim to a useful tool to get the 
+rich system hardware and firmware information, include:
+	PCI device view, read and write PCI device configuration space
+	PCIe device view, read and write PCIe configuration space
+	CMOS value read, write, backup
+	SMBIOS table read, dump and interpret
+	ACPI tables read, dump and interpret, DSDT table interpret to asl
+	SPD table read dump and interpret
+	I2C and SMBus device read, write 
+	IPMI console to communication to SP
+	CPU instuction value read and write, like MSR TSC MTTR and CPUID
+	LPC read and write
+	SuperIO device control
+
+
+This tool can run at cross platform, include 
+	Windows 2000
+	Windows XP
+	Windows Server 2003 x86, x64
+	Windows Vista x86, x64
+	Windows Server 2008 x86, x64 
+	
+        Linux & DOS support is only in roadmap, not exactly work now!
+	all of other platform have not tested yet. If you have other platform need, 
+	or you have tested this software in other platform, you can write to freevanx
+	(freevanx@gmail.com) to feed back. 
+	
+
+* This tool don't support Windows 95, Windows 98 and Windows ME
+
+```
+# Details #
+
+```
+
+Windows Library name is Output\Win32\Debug\QuikIOLib.dll
+ 
+binaries is under Output\Win32\Debug\ folder
+ 
+source code is under utility folder.
+
+cmos.exe     A CMOS access demo
+cpuid.exe    A cpuid access demo
+io.exe       A io port access demo
+mem.exe      A memory access demo
+msr.exe      A CPU MSR access demo
+pci.exe      A PCI device access demo
+smbus.exe    A SMBus device access demo
+ 
+Following is porting from famous Linux program dmidecode 
+dmidecode.exe
+biosdecode.exe
+vpddecode.exe
+owership.exe    
+ 
+ectool.exe    porting from coreboot ，dump EC space
+ 
+pmtool is porting from Linux's pmtool
+acpidump.exe      dump acpi table
+acpixtract.exe    extract acpitable
+madt.exe    
+ 
+superiotool    porting from coreboot's superiotool，show superio information
+ 
+You should install WDK7000 to build utilitis
+How to build：
+build.cmd
+nmake
+
+
+```
+
+
+
+# QuikIO Library APIs #
+
+
+http://code.google.com/p/lychee-prj/wiki/QuikIO_Library_API
+
+
+
+# How to write program #
+
+
+http://code.google.com/p/lychee-prj/wiki/Sample_Application
+
+
+
+# Screenshot #
+
+### acpidump.exe ###
+
+![http://lychee-prj.googlecode.com/files/acpidump.png](http://lychee-prj.googlecode.com/files/acpidump.png)
+
+### biosdecode.exe ###
+
+![http://lychee-prj.googlecode.com/files/biosdecode.png](http://lychee-prj.googlecode.com/files/biosdecode.png)
+
+### cmos.exe ###
+
+![http://lychee-prj.googlecode.com/files/cmos.png](http://lychee-prj.googlecode.com/files/cmos.png)
+
+### cpuid.exe ###
+
+![http://lychee-prj.googlecode.com/files/cpuid.png](http://lychee-prj.googlecode.com/files/cpuid.png)
+
+### dmi.exe ###
+
+![http://lychee-prj.googlecode.com/files/dmi.png](http://lychee-prj.googlecode.com/files/dmi.png)
+
+### ectool.exe ###
+
+![http://lychee-prj.googlecode.com/files/ectool.png](http://lychee-prj.googlecode.com/files/ectool.png)
+
+### io.exe ###
+
+![http://lychee-prj.googlecode.com/files/io.png](http://lychee-prj.googlecode.com/files/io.png)
+
+### mem.exe ###
+
+![http://lychee-prj.googlecode.com/files/mem.png](http://lychee-prj.googlecode.com/files/mem.png)
+
+### msr.exe ###
+
+![http://lychee-prj.googlecode.com/files/msr.png](http://lychee-prj.googlecode.com/files/msr.png)
+
+### pci.exe ###
+
+![http://lychee-prj.googlecode.com/files/pci.png](http://lychee-prj.googlecode.com/files/pci.png)
+
+
+# Reference #
+
+
+dmidecode http://www.nongnu.org/dmidecode/
+
+coreboot http://www.coreboot.org
+
+pmtools http://www.lesswatts.org/projects/acpi/utilities.php
